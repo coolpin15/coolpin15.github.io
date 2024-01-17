@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Pathway+Gothic+One&display=swap');
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .info .pin {
+    animation: fadeIn 1.7s ease forwards; /* 動畫1，持續1秒，使用ease曲線 */
+    animation-delay: 0.5s; /* 延遲0.5秒開始動畫 */
+  }
+  
+  .info .blue {
+    animation: slideIn 1.5s ease forwards; /* 運行名為 slideIn 的動畫，持續時間為 0.5 秒，使用 ease 曲線，保持最終狀態 */
+    animation-delay: 1s; /* 延遲1秒開始動畫 */
+   
+  }
+  
+  .info .wu {
+    animation: fadeIn 1s ease forwards; /* 動畫3，持續1秒，使用ease曲線 */
+    animation-delay: 2s; /* 延遲1.5秒開始動畫 */
+  }
+
+  .info .word {
+    animation: fadeIn 2s ease forwards; /* 動畫3，持續1秒，使用ease曲線 */
+    animation-delay: 2.5s; /* 延遲1.5秒開始動畫 */
+  }
+
+@keyframes slideIn {
+    from {
+      transform: translateX(100%); /* 從右邊 100% 的位置開始 */
+      opacity: 0; /* 初始透明度為 0，元素隱藏 */
+    }
+    to {
+      transform: translateX(0); /* 移動到左邊 0 的位置 */
+      opacity: 1; /* 透明度變為 1，元素可見 */
+    }
+  }
+
+  @keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(25px); /* 向右移動 100 像素，根據需求調整數值 */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    font-family: 'Noto Serif TC', serif;
+    font-family: 'Pathway Gothic One', sans-serif;
+
+    width: 1280px;
+    margin: 0 auto; /*居中設定*/
+    background-color: #ffffff;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+
+
+}
+
+a.top {
+    background-image: url(do/home.png);
+    background-size: cover;
+    width: 60px; 
+    height: 60px;
+    /*設定定位讓他在畫面右下角*/
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;/*設定在最上，才不會被蓋到*/
+}
+
+header {
+    display: flex;/*橫排*/
+    position: fixed;
+    padding: 30px 30px;
+
+    z-index: 999;/*設定在最上，才不會被蓋到*/
+}
+
+header .logo-top{
+    margin-right: auto;/*撐開中間距離*/
+
+}
+
+
+
+.logo-top {
+    background-image: url(do/pinwenplogo.png);
+    background-size: cover;
+    width: 270px; 
+    height: 103px;
+
+}
+
+.logo-top2 {
+    padding-top: 20px;
+    padding-left: 830px;
+
+}
+
+
+.line-top {
+    background-image: url(do/linetop.png);
+    background-size: cover;
+    width: 65px; 
+    height: 35px;
+    
+}
+
+.info {
+    width: 100%;
+    height: 832px;
+    background-color: black;
+
+    position: relative;
+}
+
+.info .word {
+    width: 495px;
+
+    padding-left: 135px;
+    padding-top: 260px;
+
+    opacity: 0;
+    position: absolute; 
+    z-index: 25;
+
+}
+
+.info .pin {
+
+    height: 800px;
+    position: absolute;
+    bottom: 0; /* 將圖片的底部與父容器的底部對齊 */
+    vertical-align: bottom; /* 垂直對齊到底部 */
+    left: 620px;
+
+    opacity: 0;
+
+    z-index: 3;
+}
+
+.info .wu {
+    height: 832px;
+    width: 100%;
+    background-size: cover;
+    background-image: url(do/上虛線.png);
+
+    position: absolute;
+    bottom: 0; /* 將圖片的底部與父容器的底部對齊 */
+    right: 0; /* 將圖片的右側與父容器的右側對齊 */
+
+    opacity: 0; /* 初始透明度為 0，元素隱藏 */
+
+    z-index: 1;
+}
+
+.info .blue {
+    height: 490px;
+    width: 100%;
+    background-size: cover;
+    background-image: url(do/blue.png);
+
+    position: absolute;
+    bottom: 0; /* 將圖片的底部與父容器的底部對齊 */
+    right: 0; /* 將圖片的右側與父容器的右側對齊 */
+
+    
+    opacity: 0; /* 初始透明度為 0，元素隱藏 */
+
+    z-index: 2;
+}
+
+.info .word h3 {
+    padding-top: 15px;
+
+}
+.info .word p {
+    padding-top: 25px;
+
+}
+
+.logo {
+    width: 100%;
+    height: 832px;
+    background-color: #161F26;
+            
+        }
+
+        .logo h1 {
+            padding-left: 135px;
+            padding-top: 112px;
+        }
+        .logo h3 {
+            padding-left: 135px;
+            padding-top: 15px;
+        }
+        .logo_image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 106px;
+
+            padding-top: 87px;
+        }
+
+        .card {
+            width: 250px; 
+            height: 250px;
+            background-color: aqua;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card::after {
+            content: " ";
+            display: block;
+            width: 200px; 
+            height: 200px;
+            background-color: #1C78CD;
+            position: absolute;
+            left: 60px; 
+            top:60px;
+            z-index: -1;
+        }
+
+        .content {
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .content img {
+            width: 100%;
+            transition: 0.4s;
+        }
+
+        .card:hover .content img {
+            transform: scale(1.3);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* 半透明的藍色背景 */
+            opacity: 0; /* 初始設置透明度為 0，使其隱藏 */
+            transition: opacity 0.5s ease; /* 添加過渡效果 */
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 2.5px;
+        }
+
+        .card:hover .overlay {
+            opacity: 1; /* 滑鼠懸停時設置透明度為 1，顯示覆蓋效果 */
+        }
+
+
+
+        .logo .logo_line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 43px;
+
+            padding-top: 60px;
+            padding-left: 10px;
+        }
+
+        .blue_line {
+            background-color: #1C78CD;
+            width: 260px;
+            height: 3px;
+            border-radius: 1.5px;
+        }
+
+        .blue_ball {
+            background-color: #1c78cd;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        
+.font {
+    width: 100%;
+    background-color: black;
+
+            
+        }
+
+        .font h1 {
+            padding-left: 135px;
+            padding-top: 112px;
+        }
+        .font h3 {
+            padding-left: 135px;
+            padding-top: 15px;
+        }
+
+        .more_box {
+            padding-top: 70px;
+            padding-bottom: 80px;
+            padding-left: 1000px;
+
+        }
+
+        .more {
+            width: 200px;
+            height: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+
+            text-decoration: none;/*清除超連結底線*/
+            color: #ffffff;
+            font-size: 20px;
+            letter-spacing: 2px;
+
+            transition: color 0.3s ease;
+
+            animation: moveLeftRight 1.5s infinite; /* 播放時間為2秒，並無限次重複播放 */
+        }
+        .arrow {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transition: 0.3s;
+
+        }
+        .arrow2 {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .more img {
+            transition: opacity 1s ease;
+        }
+
+        .more:hover {/*變色*/
+            color: #1C78CD;       
+        }
+
+        .more:hover .arrow {
+            opacity: 100%;
+        }
+        
+
+
+        .font .font_image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 106px;
+
+            padding-top: 87px;
+        }
+
+        .overlay2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(13, 13, 13, 0.7); /* 半透明的藍色背景 */
+            opacity: 0; /* 初始設置透明度為 0，使其隱藏 */
+            transition: opacity 0.5s ease; /* 添加過渡效果 */
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 2.5px;
+        }
+
+        .card:hover .overlay2 {
+            opacity: 1; /* 滑鼠懸停時設置透明度為 1，顯示覆蓋效果 */
+        }
+
+        .font .font_line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 43px;
+
+            padding-top: 60px;
+            padding-left: 10px;
+        }
+
+        .blue_line {
+            background-color: #1C78CD;
+            width: 260px;
+            height: 3px;
+            border-radius: 1.5px;
+        }
+
+        .blue_ball {
+            background-color: #1c78cd;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+        }
+
+.contact{
+    width: 100%;
+    height: 528px;
+    background-color: #161F26;
+    position: relative;
+
+
+
+}
+
+        .contact .word {
+            padding-left: 135px;
+            padding-top: 112px;
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .contact .wu3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(do/wudi.png);
+            background-size: cover;
+            background-position: center;
+            top: 0;
+            left: 0;
+
+            z-index: 0;
+
+        }
+
+        .contact .word h3 {
+            padding-top: 15px;
+        
+        }
+        .contact .word p {
+            padding-top: 25px;
+        
+        }
+
+        .community {
+            display: flex;
+
+            align-items: center;
+            z-index: 25;
+            gap: 25px;
+
+            padding-left: 135px;
+            padding-top: 50px;
+            padding-bottom: 80px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+h1 {
+
+    margin: 0;
+
+    color: #1C78CD;
+    font-size: 70px;
+    letter-spacing: 3.5px;
+}
+h3 {
+    margin: 0;
+
+    color: white;
+    font-size: 30px;
+    letter-spacing: 6px;
+}
+p {
+    margin: 0;
+
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    background-color: black;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
